@@ -1,38 +1,36 @@
 #include <stdio.h>
 
 /**
- * main - Prints all possible combinations of two two-digit numbers,
- *        ranging from 0-99, separated by a comma followed by a space.
- *
- * Return: Always 0.
+ * main - create 2 pairs of numbers that do not repeat
+ * Return: 0
  */
 int main(void)
 {
-	int num1, num2;
+	int j, i;
 
-	for (num1 = 0; num1 <= 98; num1++)
+	for (j = 0; j <= 99; j++)
 	{
-		for (num2 = num1 + 1; num2 <= 99; num2++)
+		for (i = j; i <= 99; i++)
 		{
-			putchar((num1 / 10) + '0');
-			putchar((num1 % 10) + '0');
-			putchar(' ');
-			putchar((num2 / 10) + '0');
-			putchar((num2 % 10) + '0');
+			if (i != j)
+			{
 
-			if (num1 == 98 && num2 == 99)
-				continue;
+				putchar(j / 10 + 48);
+				putchar(j % 10 + 48);
+				putchar(' ');
+				putchar(i / 10 + 48);
+				putchar(i % 10 + 48);
 
-			putchar(',');
-			putchar(' ');
+				if (j * 100 + i != 9899)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+
 		}
+
 	}
-
 	putchar('\n');
-
 	return (0);
 }
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-
