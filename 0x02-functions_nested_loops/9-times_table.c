@@ -2,9 +2,7 @@
 
 /**
  * times_table - prints the 9 times table
- *@x: and @y: for nested loop and @z:the multiplication
  *
- * Return: Always 0.
  */
 
 void times_table(void)
@@ -30,7 +28,7 @@ void times_table(void)
 			else if (z >= 10)
 			{
 				_putchar(',');
-                                _putchar(' ');
+				_putchar(' ');
 				_putchar((z / 10) + '0');
 				_putchar((z % 10) + '0');
 			}
