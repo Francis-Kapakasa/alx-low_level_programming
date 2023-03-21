@@ -2,7 +2,9 @@
 
 /**
  * add -  adds two integers
- * @x: interger 1, y: integer 2, z: is the result
+ * @x: interger 1
+ * @y: integer 2
+ * @z: is the result
  *
  * Return: addition result
  */
