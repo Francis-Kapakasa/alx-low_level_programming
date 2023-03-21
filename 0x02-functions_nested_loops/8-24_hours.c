@@ -21,18 +21,18 @@ void jack_bauer(void)
 				if (y < 10)
 				{
 					_putchar('0');
-					_putchar(x);
+					_putchar(x + '0');
 					_putchar(':');
 					_putchar('0');
-					_putchar(y);
+					_putchar(y + '0');
 					_putchar('\n');
 				}
 				else
 				{
 					_putchar('0');
-                                        _putchar(x);
+                                        _putchar(x + '0');
                                         _putchar(':');
-                                        _putchar(y);
+                                        _putchar(y + '0');
 					_putchar('\n');
 				}
 			}
@@ -43,17 +43,17 @@ void jack_bauer(void)
 			{
 				if (y < 10)
 				{
-                                        _putchar(x);
+                                        _putchar(x + '0');
                                         _putchar(':');
                                         _putchar('0');
-                                        _putchar(y);
+                                        _putchar(y + '0');
 					_putchar('\n');
 				}
 				else
 				{
-                                        _putchar(x);
+                                        _putchar(x + '0');
                                         _putchar(':');
-                                        _putchar(y);
+                                        _putchar(y + '0');
 					_putchar('\n');
 				}
 			}
