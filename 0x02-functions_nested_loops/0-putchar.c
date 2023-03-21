@@ -12,7 +12,7 @@ char print_char(void)
 
 	while (*x)
 	{
-		putchar(*x);
+		_putchar(*x);
 		x++;
 	}
 	return (0);
@@ -26,7 +26,7 @@ char print_char(void)
 int main(void)
 {
 	print_char();
-	putchar('\n');
+	_putchar('\n');
 
 	return (0);
 }
