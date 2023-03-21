@@ -4,7 +4,7 @@
  * print_last_digit - prints the last digit of a number
  * @x: variable to be find last digit from, @y: last digit
  *
- * Return: Always 0.
+ * Return: last digit.
  */
 
 int print_last_digit(int x)
@@ -22,5 +22,5 @@ int print_last_digit(int x)
 		_putchar(y);
 	}
 
-	return (0);
+	return (y);
 }
