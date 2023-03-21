@@ -8,18 +8,15 @@
 
 int _isalpha(int c)
 {
-	char *x = "abcdefghijklmnopqrstuvwxyz", *y = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	int x = c, y = c;
 
-	while (*x || *y)
+
+	if (((x >= 'a') && (x <= 'z')) || ((y >= 'A') && (y <= 'Z')))
 	{
-		if (c == x || c == y)
-		{
-			return (1);
-		}
-		else
-		{
-			x++;
-		}
+		return (1);
 	}
-	return (0);
+	else
+	{
+		return (0);
+	}
 }
