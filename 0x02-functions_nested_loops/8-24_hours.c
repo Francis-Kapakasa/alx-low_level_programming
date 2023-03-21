@@ -1,66 +1,40 @@
 #include "main.h"
-
 /**
  * jack_bauer - prints the every minute up to 24 hours
- * @x: hours, @y: minutes
- *
- * Return: Always 0.
  */
 
 void jack_bauer(void)
 {
-	int x;
-	int y;
+	int x, y;
 
-	for (x = 0; x <= 23; x++)
+	for (x = 0; x < 24; x++)
 	{
-		if (x < 10)
+		for (y = 0; y < 60; y++)
 		{
-			for (y = 0; y < 60; y++)
+			if (x < 10)
 			{
-				if (y < 10)
-				{
-					_putchar('0');
-					_putchar(x + '0');
-					_putchar(':');
-					_putchar('0');
-					_putchar(y + '0');
-					_putchar('\n');
-				}
-				else
-				{
-					_putchar('0');
-                                        _putchar(x + '0');
-                                        _putchar(':');
-                                        _putchar((y / 10) + '0');
-					_putchar((y % 10) + '0');
-					_putchar('\n');
-				}
+				_putchar('0');
+				_putchar(x + '0');
 			}
-		}
-		else
-		{
-			for (y = 0; y < 60; y++)
+			else if (x >= 10)
 			{
-				if (y < 10)
-				{
-                                        _putchar((x / 10) + '0');
-					_putchar((x % 10) + '0');
-                                        _putchar(':');
-                                        _putchar('0');
-                                        _putchar(y + '0');
-					_putchar('\n');
-				}
-				else
-				{
-                                        _putchar((x / 10) + '0');
-                                        _putchar((x % 10) + '0');
-                                        _putchar(':');
-                                        _putchar((y / 10) + '0');
-                                        _putchar((y % 10) + '0');
-					_putchar('\n');
-				}
+				_putchar((x / 10) + '0');
+				_putchar((x % 10) + '0');
 			}
+			if (y < 10)
+			{
+				_putchar(':');
+				_putchar('0');
+				_putchar(y + '0');
+			}
+			else if (y >= 10)
+			{
+				_putchar(':');
+				_putchar((y / 10) + '0');
+				_putchar((y % 10) + '0');
+			}
+			_putchar('\n');
 		}
+
 	}
 }
