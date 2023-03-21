@@ -9,16 +9,15 @@
 
 void print_alphabet_x10(void)
 {
-        char *lower_case_alphabet = "abcdefghijklmnopqrstuvwxyz";
+	int x, y = 0;
 
-	for (int x = 0, x<10,x++)
+	while (y < 9)
 	{
-		 while (*lower_case_alphabet)
-        	{
-                _putchar(*lower_case_alphabet);
-                lower_case_alphabet++;
-        	}
-		 _putchar("\n");
+		for (x = 'a', x <= 'z', x++)
+		{
+			_putchar(x);
+		}
+		_putchar("\n");
 	}
-        return (0);
+	return (0);
 }
