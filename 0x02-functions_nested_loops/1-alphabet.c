@@ -2,19 +2,17 @@
 
 /**
  * print_alphabet - prints the alphabet in lowercase
- *
+ * @x: to hold value for character
  * Return: Always 0.
  */
 
 void print_alphabet(void)
 {
-	char *lower_case_alphabet = "abcdefghijklmnopqrstuvwxyz";
+	int x;
 
-	while (*lower_case_alphabet)
+	for (x = 'a'; x <= 'z'; x++)
 	{
-		_putchar(*lower_case_alphabet);
-		lower_case_alphabet++;
+		_putchar(x);
 	}
-	_putchar("\n");
-	return (0);
+	_putchar('\n');
 }
