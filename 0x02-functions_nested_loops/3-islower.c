@@ -8,9 +8,9 @@
 
 int _islower(int c)
 {
-	char *x = "abcdefghijklmnopqrstuvwxyz";
+	int x;
 
-	while (*x)
+	for (x = 'a'; x <= 'z'; x++)
 	{
 		if (c == x)
 		{
