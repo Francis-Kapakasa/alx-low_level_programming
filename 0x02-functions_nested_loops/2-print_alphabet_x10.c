@@ -11,7 +11,7 @@ void print_alphabet_x10(void)
 {
 	int x, y = 0;
 
-	while (y < 9)
+	while (y < 10)
 	{
 		for (x = 'a'; x <= 'z'; x++)
 		{
@@ -20,5 +20,4 @@ void print_alphabet_x10(void)
 		_putchar('\n');
 		y++;
 	}
-	return;
 }
