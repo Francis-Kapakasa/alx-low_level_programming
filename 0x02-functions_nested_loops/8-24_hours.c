@@ -25,6 +25,7 @@ void jack_bauer(void)
 					_putchar(':');
 					_putchar('0');
 					_putchar(y);
+					_putchar('\n');
 				}
 				else
 				{
@@ -32,6 +33,7 @@ void jack_bauer(void)
                                         _putchar(x);
                                         _putchar(':');
                                         _putchar(y);
+					_putchar('\n');
 				}
 			}
 		}
@@ -45,12 +47,14 @@ void jack_bauer(void)
                                         _putchar(':');
                                         _putchar('0');
                                         _putchar(y);
+					_putchar('\n');
 				}
 				else
 				{
                                         _putchar(x);
                                         _putchar(':');
                                         _putchar(y);
+					_putchar('\n');
 				}
 			}
 		}
