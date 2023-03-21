@@ -13,7 +13,8 @@ int print_sign(int n)
 
 	if (x == 0)
 	{
-		_putchar(x'0');
+		_putchar('0');
+		_putchar('0');
 		return (0);
 	}
 	else if (x > 0)
