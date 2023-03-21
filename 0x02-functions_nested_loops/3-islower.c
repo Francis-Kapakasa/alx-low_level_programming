@@ -16,10 +16,7 @@ int _islower(int c)
 		{
 			return (1);
 		}
-		else
-		{
-			x++;
-		}
+		x++
 	}
 	return (0);
 }
