@@ -11,39 +11,20 @@
 
 char *_strcat(char *dest, char *src)
 {
-	int i, j, k;
+	int i, j = 0;
 
-	for (i = 0; i > 0; i++)
+	while (dest[j])
 	{
-		if (dest[i] == '\0')
-		{
-			break;
-		}
+		j++;
 	}
 
-	for (j = 0; j > 0; j++)
+
+	for (i = 0; src[i] != 0; i++)
 	{
-		if (src[j] == '\0')
-		{
-			break;
-		}
+		dest[j] = src[i];
+		j++;
 	}
 
-	for (k = 0; k < (i + j); k++)
-	{
-		if (k == i)
-		*(dest + k) = ' ';
-
-		else if (k == (i + 1))
-		{
-			*(dest + k) = *(src);
-		}
-
-		else if (k > (i + 1))
-		{
-			*(dest + k) = *(src + (k - i - 1));
-		}
-	}
-
+	dest[j] = '\0';
 	return (dest);
 }
