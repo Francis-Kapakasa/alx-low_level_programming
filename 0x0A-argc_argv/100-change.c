@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * sub - a function that substracts the closest coin values to the number
+ * sub - a fxn that substracts the closest coin values to the number
  * @num: the number
  *
  * Return: the count
