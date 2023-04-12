@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * argstostr - a function that concatenates all the arguments of your program.
+ * argstostr - a fxn that concatenates all the arguments of your program.
  * @ac: argument count
  * @av: argument vector
  *
