@@ -1,57 +1,84 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
- * strtow - a function that splits a string into words.
- * @str: string
- *
- * Each element of this array should contain a single word, null-terminated
- * The last element of the returned array should be NULL
- * Words are separated by spaces
- * Returns NULL if str == NULL or str == ""
- *
- * Return: a pointer to an array of strings (words)
+ * count_words - counts separate words in string
+ * @str: point to s
+ * Return: number of words
  */
-
-char **strtow(char *str)
+int count_words(char *str)
 {
-	char **strw;
-	int i = 0, j, p = 0, l, n;
+	int i, count;
 
-	if (str == NULL || *str == '\0')
-		return (NULL);
-
-	l = strlen(str);
-	strw = malloc(l * sizeof(char *));
-	if (strw == NULL)
-	{
-		free(strw);
-		return (NULL);
-	}
-
+	i = 0;
+	count = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] != ' ' && str[i - 1] == ' ')
-		{
-			j = 1;
-			while (str[i + j] != ' ')
-				j++;
-			strw[p] = malloc(j * sizeof(char));
-			if (strw[p] == NULL)
-			{
-				while (p--)
-					free(strw[p]);
-				free(strw);
-				return (NULL);
-			}
-			for (n = 0; n < j; n++)
-				strw[p][n] = str[i + n];
-			strw[p][n] = '\0';
-			p++;
-			i += j;
-		}
-		else
-			i++;
+		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
+			count++;
+		i++;
 	}
-	strw[p] = NULL;
-	return (strw);
+	return (count);
+}
+
+/**
+ * _wrdlen - returns the length of a word
+ * @s: pointer to s
+ * Return: 0 on success
+ */
+int _wrdlen(char *s)
+{
+	int count = 0;
+
+	while (*(s + count) != ' ' && *(s + count) != '\0')
+		count++;
+	return (count);
+}
+
+/**
+ * strtow - splits a string into words
+ * @str: string to break
+ * Return: array of strings(words)
+ */
+char **strtow(char *str)
+{
+	int i, j, k, h, c, len;
+	char **words;
+
+	if (str == NULL || str[0] == '\0')
+		return (NULL);
+	c = count_words(str);
+	if (c == 0)
+		return (NULL);
+	words = malloc(sizeof(char *) * (c + 1));
+	if (words == NULL)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (str[i] != '\0')
+	{
+		while (str[i] == ' ' && str[i] != '\0')
+			i++;
+		if (str[i] == '\0')
+		{
+			words[j] = NULL;
+			return (words);
+		}
+		words[j] = malloc(sizeof(char) * _wrdlen(str + i) + 1);
+		if (words[j] == NULL)
+		{
+			for (k = j - 1; k >= 0; k--)
+				free(words[k]);
+			free(words);
+			return (NULL);
+		}
+		len = _wrdlen(str + i);
+		for (h = 0; h < len && str[i] != '\0'; h++, i++)
+			words[j][h] = str[i];
+		words[j][h] = '\0';
+		j++;
+	}
+	words[j] = NULL;
+	return (words);
 }
