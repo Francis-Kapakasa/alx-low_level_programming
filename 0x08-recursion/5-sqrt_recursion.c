@@ -2,8 +2,11 @@
 
 /**
  * _sqrt_recursion - returns the natural square root of a number
+ * check_sqrt_root - to check if a number has a sqrt
  *
  * @n: a number to calculate natural square root from
+ * @i: sqrt test integer
+ * @k: number being tested
  *
  * Return: natural square root or -1 if it doesnt exist
  *
