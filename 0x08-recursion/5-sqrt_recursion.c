@@ -16,7 +16,7 @@ int check_sqrt_root(int i, int k)
                 return (i);
         }
 
-        else if (i * i > k))
+        else if (i * i > k)
         {
                 return (-1);
         }
