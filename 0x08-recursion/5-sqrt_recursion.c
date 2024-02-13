@@ -18,7 +18,7 @@ int check_sqrt_root(int i, int k)
 
         else
         {
-                i++;
+                return (-1);
         }
 }
 
@@ -27,7 +27,7 @@ int _sqrt_recursion(int n)
 	if (n > 0)
 	{
 		check_sqrt_root(1, n);
-		_sqrt_recursion(n);
+		return _sqrt_recursion(n);
 	}
 
 	else
