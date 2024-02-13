@@ -11,13 +11,27 @@
 
 int _sqrt_recursion(int n)
 {
-	if ((n % _sqrt_recursion(n - 1)) == 0 && _sqrt_recursion(n - 1) * _sqrt_recursion(n - 1) == n)
+	if (n > 0)
 	{
-		return _sqrt_recursion(n);
+		check_sqrt_root(1, n);
+		_sqrt_recursion(n);
 	}
 
 	else
 	{
 		return (-1);
+	}
+}
+
+int check_sqrt_root(int i, int k)
+{
+	if (i*i == k)
+	{
+		return (i);
+	}
+
+	else
+	{
+		i++;
 	}
 }
