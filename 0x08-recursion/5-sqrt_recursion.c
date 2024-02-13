@@ -23,7 +23,7 @@ int check_sqrt_root(int i, int k)
 
 	else
 	{
-		return (check_sqrt_root( i + 1, k));
+		return (check_sqrt_root(i + 1, k));
 	}
 }
 
