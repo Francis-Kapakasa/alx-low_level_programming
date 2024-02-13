@@ -23,7 +23,7 @@ int is_prime_number(int n)
 
 	else if (n <= 1)
 	{
-		returm (0);
+		return (0);
 	}
 
 	return (0 + is_prime_number(n));
