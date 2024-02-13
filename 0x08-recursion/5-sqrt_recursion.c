@@ -31,7 +31,7 @@ int _sqrt_recursion(int n)
 {
 	if (n > 0)
 	{
-		check_sqrt_root(1, n);
+		return check_sqrt_root(1, n);
 	}
 
 	else
