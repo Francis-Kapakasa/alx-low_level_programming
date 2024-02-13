@@ -11,15 +11,20 @@
 
 int check_sqrt_root(int i, int k)
 {
-        if (i*i == k)
+        if (i * i == k)
         {
                 return (i);
         }
 
-        else
+        else if (i * i > k))
         {
                 return (-1);
         }
+
+	else
+	{
+		return check_sqrt_root( i + 1, k);
+	}
 }
 
 int _sqrt_recursion(int n)
@@ -27,7 +32,6 @@ int _sqrt_recursion(int n)
 	if (n > 0)
 	{
 		check_sqrt_root(1, n);
-		return _sqrt_recursion(n);
 	}
 
 	else
